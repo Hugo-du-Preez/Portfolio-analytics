@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 📊 Portfolio Analytics
 
 [![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
@@ -39,7 +39,7 @@ A modern, responsive portfolio website showcasing data analytics projects and me
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio-analytics.git
+   git clone https://github.com/Hugo-du-Preez/portfolio-analytics.git
    cd portfolio-analytics
    ```
 
@@ -176,9 +176,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Hugo du Preez**
 
 - **Portfolio**: [Your Live Site URL]
-- **GitHub**: [Your GitHub Profile]
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Email**: [your.email@example.com]
+- **GitHub**: [https://github.com/Hugo-du-Preez]
+- **LinkedIn**: [https://www.linkedin.com/in/hugo-du-preez/]
+- **Email**: [hugo777dupreez@gmail.com]
 
 ## 🙏 Acknowledgments
 
@@ -189,8 +189,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Built with ❤️ by Hugo du Preez for data analytics professionals*</content>
-=======
-# Portfolio-analytics
-A modern, responsive portfolio website showcasing data analytics projects and methodologies. Built with vanilla HTML, CSS, and JavaScript, and deployed on Azure Static Web Apps.
->>>>>>> d9025683fe858169cecb1c63836d765159d4e07b
+*Built with ❤️ by Hugo du Preez for data analytics professionals*
