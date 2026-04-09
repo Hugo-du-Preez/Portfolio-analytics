@@ -1,6 +1,6 @@
 # 📊 Portfolio Analytics Dashboard
 
-[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Free%20Tier-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
+[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Free%20Tier-blue?style=for-the-badge&logo=microsoft-azure)](https://white-meadow-022a87d10.1.azurestaticapps.net/#contact)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Embedded-orange?style=for-the-badge&logo=power-bi)](https://powerbi.microsoft.com/)
 [![Excel Online](https://img.shields.io/badge/Excel-Online-green?style=for-the-badge&logo=microsoft-excel)](https://www.microsoft.com/en-us/microsoft-365/excel)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
