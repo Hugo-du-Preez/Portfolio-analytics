@@ -8,37 +8,35 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/Responsive-Design-green?style=for-the-badge&logo=device)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
 
-> A modern, responsive portfolio website showcasing data analytics projects and methodologies. Built with vanilla HTML, CSS, and JavaScript, and deployed on Azure Static Web Apps.
+> A professional portfolio website showcasing data analytics expertise, featuring interactive dashboards, methodology documentation, and project case studies. Built with modern web technologies and deployed on Azure Static Web Apps.
 
-## 🌟 Features
+## 🌟 Key Features
 
-- **📱 Responsive Design**: Mobile-first approach with adaptive navigation
-- **📊 Interactive Dashboard**: Visual analytics portfolio showcase
-- **🔬 Methodology Section**: Detailed approach to data analysis
-- **🏗️ Architecture Overview**: System design and data flow diagrams
-- **📈 Data Insights**: Sample datasets and analysis techniques
-- **📞 Contact Integration**: Professional contact information
-- **⚡ Fast Loading**: Optimized static site with minimal dependencies
-- **🎨 Modern UI**: Clean, professional design with smooth animations
+- **📊 Interactive Analytics Dashboard** - Visual representation of data insights
+- **📱 Fully Responsive Design** - Optimized for all devices and screen sizes
+- **🔬 Data Analysis Methodology** - Comprehensive approach to analytics projects
+- **🏗️ System Architecture** - Technical implementation details
+- **📈 Power BI Integration** - Sample reports and dashboard examples
+- **⚡ Fast & Lightweight** - No frameworks, pure vanilla implementation
+- **🎨 Modern UI/UX** - Clean, professional design with smooth animations
 
-## 🛠️ Technologies Used
+## 🛠️ Technology Stack
 
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
-| **Styling** | Custom CSS with mobile-responsive design |
+| Component | Technology |
+|-----------|------------|
+| **Frontend** | HTML5, CSS3, ES6+ JavaScript |
+| **Styling** | Custom CSS with CSS Grid & Flexbox |
 | **Deployment** | Azure Static Web Apps |
 | **CI/CD** | GitHub Actions |
-| **Analytics Tools** | Power BI (sample reports included) |
-| **Version Control** | Git, GitHub |
+| **Analytics** | Power BI Desktop |
+| **Version Control** | Git & GitHub |
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-
-- ✅ Modern web browser (Chrome, Firefox, Safari, Edge)
-- ✅ Git (for cloning the repository)
-- ✅ Internet connection (for deployment)
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Git for version control
+- Internet connection for deployment
 
 ### Local Development
 
@@ -48,141 +46,118 @@
    cd Portfolio-analytics
    ```
 
-2. **Open in browser**
+2. **Run locally**
    ```bash
-   # Option 1: Direct file opening
-   start index.html  # Windows
-   open index.html   # macOS
-   xdg-open index.html  # Linux
+   # Option 1: Simple file opening
+   # Double-click index.html or open in browser
 
    # Option 2: Local server (recommended)
    python -m http.server 8000
-   # Then visit: http://localhost:8000
+   # Visit: http://localhost:8000
    ```
 
-3. **Navigate the site**
-   - Use the navigation menu to explore different sections
-   - Mobile menu available on smaller screens
-   - All links and interactions are fully functional
+3. **Explore the site**
+   - Navigate through different sections
+   - Test responsive design on various screen sizes
+   - Interact with dashboard elements
 
 ## 📁 Project Structure
 
 ```
 Portfolio-analytics/
-├── 📄 index.html              # Main portfolio page
-├── 📁 src/
-│   └── 📁 css/
-│       ├── 📄 styles.css      # Main stylesheet
-│       └── 📁 js/
-│           └── 📄 app.js      # Non-critical JavaScript
-├── 📁 reports/
-│   ├── 📄 README.md           # Power BI report documentation
-│   └── 📄 *.pbix              # Power BI report files
-├── 📁 .github/
-│   └── 📁 workflows/
-│       └── 📄 azure-static-web-apps.yml  # CI/CD pipeline
-├── 📄 .gitignore              # Git ignore rules
-├── 📄 LICENSE                 # MIT License
-└── 📄 README.md               # This file
+├── index.html                 # Main portfolio page
+├── src/
+│   └── css/
+│       ├── styles.css         # Main stylesheet
+│       └── js/
+│           └── app.js         # Interactive JavaScript
+├── reports/
+│   ├── README.md              # Report documentation
+│   └── *.pbix                 # Power BI files
+├── .github/
+│   └── workflows/
+│       └── azure-static-web-apps.yml
+├── .gitignore                 # Git ignore rules
+├── LICENSE                    # MIT License
+└── README.md                  # Project documentation
 ```
 
 ## 🌐 Deployment
 
-This project is configured for automatic deployment to Azure Static Web Apps via GitHub Actions.
-
 ### Azure Static Web Apps Setup
 
-1. **Create Azure Static Web App**
-   - Go to [Azure Portal](https://portal.azure.com)
-   - Search for "Static Web Apps" → Create
-   - Choose your subscription and resource group
+1. **Create Resource**
+   - Azure Portal → Static Web Apps → Create
+   - Select subscription and resource group
 
-2. **Connect GitHub Repository**
-   - **Source**: GitHub
-   - **Organization**: Hugo-du-Preez
-   - **Repository**: Portfolio-analytics
-   - **Branch**: main
+2. **Connect Repository**
+   - Source: GitHub
+   - Organization: Hugo-du-Preez
+   - Repository: Portfolio-analytics
+   - Branch: main
 
 3. **Build Configuration**
-   - **Build Preset**: Custom
-   - **App location**: `/`
-   - **API location**: (leave empty)
-   - **Output location**: `.`
+   - Build Preset: Custom
+   - App location: `/`
+   - API location: *(empty)*
+   - Output location: `.`
 
-4. **Review & Create**
-   - Azure will automatically set up CI/CD
-   - Your site will be live in minutes!
+4. **Deploy**
+   - Azure handles CI/CD automatically
+   - Site goes live in minutes
 
-### Environment Variables
+## 📊 Analytics Showcase
 
-The deployment uses `AZURE_STATIC_WEB_APPS_API_TOKEN` which is automatically configured when connecting the repository.
+### Power BI Dashboard Features
+- **Task Management** - Progress tracking and status monitoring
+- **Resource Allocation** - Team utilization visualization
+- **Timeline Analysis** - Project scheduling and deadlines
+- **Performance Metrics** - KPI tracking and reporting
+- **Interactive Filters** - Dynamic data exploration
 
-## 📊 Analytics Reports
-
-The `reports/` directory contains sample Power BI reports:
-
-### 📈 ProjectManagementDashboard.pbix
-**Interactive project management dashboard featuring:**
-- 📊 Task progress tracking with visual indicators
-- 👥 Resource allocation visualization
-- ⏰ Overdue task monitoring with color-coded alerts
-- 🎯 Priority-based filtering and slicers
-- 📅 Custom calendar table for date intelligence
-- 🔄 Role-playing dimensions (Due Date, Created Date, Completed Date)
-
-**Key Metrics:**
-- Task completion rates
-- Resource utilization
-- Project timelines
-- Performance indicators
+### Technical Implementation
+- Custom calendar tables for date intelligence
+- Role-playing dimensions for flexible analysis
+- Conditional formatting for visual indicators
+- Slicers and filters for user interaction
 
 ## 🎨 Customization
 
 ### Styling
-- Main styles in `src/css/styles.css`
-- CSS custom properties (variables) for theming
-- Mobile breakpoints: 768px and 1024px
-- Smooth animations and transitions
+- Modify `src/css/styles.css` for visual changes
+- CSS custom properties for consistent theming
+- Responsive breakpoints: 768px, 1024px
+- Smooth transitions and hover effects
 
 ### Content
-- Update sections directly in `index.html`
-- Modify navigation in the header
-- Add new sections following existing structure
+- Update portfolio sections in `index.html`
+- Modify navigation and contact information
+- Add new projects or case studies
+- Customize dashboard examples
 
-### JavaScript
-- Critical JS inline in HTML for guaranteed execution
-- Non-critical JS in `src/css/js/app.js`
-- Vanilla JavaScript with modern ES6+ features
+### Functionality
+- Enhance interactions in `src/css/js/app.js`
+- Add new features or animations
+- Improve accessibility and performance
 
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these steps:
+Contributions are welcome! Here's how to get involved:
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/new-feature`)
+3. **Commit** changes (`git commit -m 'Add new feature'`)
+4. **Push** to branch (`git push origin feature/new-feature`)
+5. **Open** a Pull Request
 
-### Development Guidelines
-- ✅ Maintain responsive design principles
-- ✅ Test on multiple devices and browsers
-- ✅ Keep JavaScript vanilla (no frameworks)
-- ✅ Follow semantic HTML practices
-- ✅ Optimize images and assets
+### Guidelines
+- Maintain responsive design principles
+- Test across different browsers and devices
+- Follow semantic HTML structure
+- Keep code clean and well-documented
+- Ensure accessibility compliance
 
 ## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ```
 MIT License
@@ -202,28 +177,29 @@ copies or substantial portions of the Software.
 
 ## 📞 Contact
 
-**Hugo du Preez** 👋
+**Hugo du Preez** 👋  
+*Data Analytics Professional*
 
 - **📧 Email**: [your.email@example.com]
 - **🐙 GitHub**: [https://github.com/Hugo-du-Preez](https://github.com/Hugo-du-Preez)
 - **💼 LinkedIn**: [Your LinkedIn Profile]
-- **🌐 Portfolio**: [Your Live Site URL - Update when deployed]
+- **🌐 Live Portfolio**: [Update with Azure URL when deployed]
 
 ## 🙏 Acknowledgments
 
-- **Azure Static Web Apps** for reliable hosting
-- **Power BI** for analytics capabilities
-- **GitHub Actions** for seamless CI/CD
-- **Modern CSS** techniques and best practices
-- **Open source community** for inspiration
+- **Azure Static Web Apps** - Reliable hosting platform
+- **Power BI** - Advanced analytics and visualization
+- **GitHub Actions** - Automated deployment pipeline
+- **Open Source Community** - Inspiration and best practices
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by [Hugo du Preez](https://github.com/Hugo-du-Preez) for data analytics professionals**
+**Built with ❤️ by Hugo du Preez**  
+*Showcasing the power of data-driven insights*
 
-⭐ **Star this repository** if you found it helpful!
+⭐ **Star this repo** if you find it helpful!
 
 </div></content>
 <parameter name="filePath">c:\Users\hugo7\Desktop\Portfolio-analytics\README.md
