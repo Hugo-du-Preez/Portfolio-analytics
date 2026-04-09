@@ -40,11 +40,11 @@ Portfolio Analytics Dashboard
 | Component | Technology | Purpose |
 |-----------|------------|---------|
 | **Frontend** | HTML5, CSS3, JavaScript | Dashboard interface and interactions |
-| **Power BI** | Power BI Embedded | Live report embedding and visualization |
-| **Excel** | Excel Online / OneDrive | Data source and spreadsheet embedding |
+| **Power BI** | Power BI Service | Live embedded reports via iframe |
+| **Excel** | OneDrive / Excel Online | Embedded spreadsheets via iframe |
 | **Hosting** | Azure Static Web Apps | Cloud deployment and CDN |
-| **Authentication** | Microsoft Account | Secure access to reports and data |
-| **APIs** | Power BI REST API | Report embedding and data access |
+| **Version Control** | Git & GitHub | Code management and deployment |
+| **Build Process** | None (Static Site) | Direct deployment without compilation |
 
 ## 🚀 Quick Start
 
@@ -63,93 +63,62 @@ Portfolio Analytics Dashboard
    cd Portfolio-analytics
    ```
 
-2. **Configure Microsoft Services**
-   ```javascript
-   // Update config in src/js/config.js
-   const config = {
-     powerBI: {
-       clientId: 'your-powerbi-client-id',
-       authority: 'https://login.microsoftonline.com/your-tenant-id',
-       reportId: 'your-report-id',
-       groupId: 'your-workspace-id'
-     },
-     oneDrive: {
-       clientId: 'your-onedrive-client-id',
-       fileId: 'your-excel-file-id'
-     }
-   };
-   ```
-
-3. **Run locally**
+2. **Run locally**
    ```bash
-   # Start local server
+   # Simple method - open directly
+   # Double-click index.html or open in browser
+
+   # Or use local server
    python -m http.server 8000
    # Visit: http://localhost:8000
    ```
 
+3. **View embedded content**
+   - Power BI report loads automatically
+   - Excel data from OneDrive displays interactively
+   - All embeds work without additional configuration
+
 ## 📊 Power BI Report Embedding
 
-### Setup Process
+### Current Implementation
+The dashboard features a **live embedded Power BI report** using a public embed URL:
 
-1. **Create Power BI Report**
-   - Design your dashboard in Power BI Desktop
-   - Publish to Power BI Service workspace
+```html
+<iframe 
+    title="Project Management Dashboard" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiZGIwMTQ0NWQtYTQ4Yy00NGViLTgwYzMtYjY5MDg2NDdjODA2IiwidCI6ImVhMWE5MDliLTY2MDAtNGEyNS04MmE1LTBjNmVkN2QwNTEzYiIsImMiOjl9" 
+    allowfullscreen
+    loading="lazy">
+</iframe>
+```
 
-2. **Configure Embedding**
-   ```javascript
-   // Power BI embedding configuration
-   const embedConfig = {
-     type: 'report',
-     id: 'your-report-id',
-     embedUrl: 'https://app.powerbi.com/reportEmbed',
-     accessToken: 'your-access-token',
-     settings: {
-       filterPaneEnabled: true,
-       navContentPaneEnabled: true
-     }
-   };
-   ```
-
-3. **Authentication Setup**
-   - Register Azure AD application
-   - Configure API permissions
-   - Generate access tokens
-
-### Embedding Features
-- **Interactive Filters** - Dynamic data exploration
-- **Responsive Layout** - Adapts to container size
-- **Export Options** - PDF, PowerPoint, Excel export
-- **Mobile Optimization** - Touch-friendly interactions
+### Features
+- **Interactive Dashboard** - Full Power BI interactivity
+- **Real-time Data** - Live updates from data source
+- **Responsive Design** - Adapts to different screen sizes
+- **Public Access** - No authentication required for viewing
 
 ## 📋 Excel OneDrive Integration
 
-### OneDrive Excel Embedding
+### Current Implementation
+The dashboard includes an **embedded Excel workbook** from OneDrive:
 
-1. **Upload Excel File**
-   - Store your Excel file in OneDrive
-   - Ensure sharing permissions are set
+```html
+<iframe 
+    src="https://1drv.ms/x/c/d35fa6b00a45c75e/IQR7jFtolxMTT5YrMZIQpX9qAdht1NdJexXldgBYzreMo4s" 
+    width="100%" 
+    height="100%" 
+    frameborder="0" 
+    scrolling="no"
+    allowfullscreen>
+</iframe>
+```
 
-2. **Generate Embed Code**
-   ```html
-   <!-- Excel Online embed code -->
-   <iframe
-     src="https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=!YOUR_AUTH_KEY&em=2&wdAllowInteractivity=False"
-     width="100%"
-     height="600px"
-     frameborder="0">
-   </iframe>
-   ```
-
-3. **Live Data Updates**
-   - Changes in OneDrive reflect immediately
-   - Real-time data synchronization
-   - Collaborative editing support
-
-### Excel Features
-- **Live Data Binding** - Real-time updates from OneDrive
-- **Interactive Charts** - Embedded Excel charts and graphs
-- **Formula Calculations** - Live computation and updates
-- **Data Validation** - Form controls and validation rules
+### Features
+- **Interactive Excel** - Full spreadsheet functionality
+- **Live Data** - Real-time updates from OneDrive
+- **Embedded View** - Seamless integration in dashboard
+- **Public Access** - Viewable without OneDrive account
 
 ## ☁️ Azure Static Web Apps Deployment
 
@@ -176,16 +145,6 @@ Portfolio Analytics Dashboard
    }
    ```
 
-3. **Environment Variables**
-   ```bash
-   # Set in Azure Portal or CLI
-   az staticwebapp environment-variables set \
-     --name "portfolio-analytics" \
-     --environment-variables \
-     POWERBI_CLIENT_ID="your-client-id" \
-     ONEDRIVE_CLIENT_ID="your-onedrive-id"
-   ```
-
 ### Free Tier Benefits
 - **100 GB Bandwidth** per month
 - **0.5 GB Storage** included
@@ -193,67 +152,61 @@ Portfolio Analytics Dashboard
 - **Global CDN** distribution
 - **SSL Certificates** included
 
+### No Environment Variables Required
+- All embeds use public URLs
+- No API keys or secrets needed
+- No authentication configuration required
+
 ## 🔧 Configuration Guide
 
 ### Power BI Setup
 
-1. **Register Application**
-   ```bash
-   # Azure AD App Registration
-   az ad app create --display-name "Portfolio Analytics"
-   ```
+**Current Implementation**: Uses public embed URLs - no API configuration required.
 
-2. **Configure Permissions**
-   - Power BI Service: Report.ReadWrite.All
-   - Azure AD: User.Read
-
-3. **Embed Token Generation**
-   ```javascript
-   // Generate embed token
-   const embedToken = await powerbi.getEmbedToken(reportId, datasets);
-   ```
+1. **Publish Report to Power BI Service**
+2. **Generate Public Embed Link**
+3. **Copy iframe code** (already implemented in `index.html`)
 
 ### OneDrive Setup
 
-1. **File Permissions**
-   - Set OneDrive file to "Anyone with link can view"
-   - Generate embed URL from OneDrive
+**Current Implementation**: Uses public sharing links - no API configuration required.
 
-2. **Excel Online Integration**
-   ```javascript
-   // OneDrive Excel API integration
-   const excelUrl = `https://graph.microsoft.com/v1.0/me/drive/items/${fileId}/workbook/worksheets`;
-   ```
+1. **Upload Excel file to OneDrive**
+2. **Set sharing to "Anyone with link can view"**
+3. **Generate embed iframe** (already implemented in `index.html`)
+
+### No API Keys Required
+- All embeds use public URLs
+- No authentication needed for viewers
+- No Azure AD app registration required
+- No client IDs or secrets needed
 
 ## 📁 Project Structure
 
 ```
 Portfolio-analytics/
-├── index.html                    # Main dashboard page
+├── index.html                    # Main dashboard with embedded reports
 ├── src/
-│   ├── css/
-│   │   ├── styles.css           # Dashboard styling
-│   │   └── responsive.css       # Mobile optimizations
-│   └── js/
-│       ├── config.js            # API configurations
-│       ├── powerbi.js           # Power BI embedding logic
-│       ├── onedrive.js          # Excel integration
-│       └── dashboard.js         # Main dashboard controller
-├── assets/
-│   ├── images/                  # Dashboard images
-│   └── icons/                   # UI icons
+│   └── css/
+│       ├── styles.css           # Dashboard styling and responsive design
+│       └── js/
+│           └── app.js           # Navigation and interaction logic
+├── reports/
+│   ├── ProjectAnalytics_Portfolio.pbix.pbix  # Power BI report file
+│   └── README.md              # Report documentation
 ├── .github/
 │   └── workflows/
-│       └── azure-static-web-apps.yml
-├── README.md                    # This documentation
-└── package.json                 # Dependencies (if any)
+│       └── azure-static-web-apps.yml  # CI/CD deployment
+├── .gitignore                  # Git ignore rules
+├── LICENSE                     # MIT license
+└── README.md                   # This documentation
 ```
 
 ## 🎨 Customization
 
 ### Dashboard Themes
 ```css
-/* Custom theme variables */
+/* Custom theme variables in styles.css */
 :root {
   --primary-color: #0078d4;
   --secondary-color: #106ebe;
@@ -262,50 +215,51 @@ Portfolio-analytics/
 }
 ```
 
-### Report Configuration
-```javascript
-// Customize embedded reports
-const reportConfig = {
-  filters: [
-    {
-      $schema: "http://powerbi.com/product/schema#basic",
-      target: { table: "Sales", column: "Region" },
-      operator: "In",
-      values: ["North", "South"]
-    }
-  ],
-  settings: {
-    panes: {
-      filters: { visible: true },
-      pageNavigation: { visible: true }
-    }
-  }
-};
-```
+### Report Updates
+To update embedded reports:
+1. **Power BI**: Publish new version to Power BI Service, update iframe URL in `index.html`
+2. **Excel**: Upload new version to OneDrive, update iframe URL in `index.html`
+
+### No JavaScript Configuration Required
+- All embeds use static iframe URLs
+- No dynamic token generation needed
+- No API calls or authentication required
 
 ## 🔐 Security Considerations
 
+### Current Implementation
+- **Public Access**: All embeds use public URLs - no authentication required
+- **Read-Only**: Embedded content is view-only, no data modification possible
+- **No API Keys**: No sensitive credentials stored in code
+- **HTTPS Only**: All embeds load over secure HTTPS connections
+
 ### Power BI Security
-- **Row-level Security (RLS)** - User-specific data access
-- **Embed Tokens** - Time-limited access tokens
-- **Azure AD Integration** - Secure authentication
+- Content is publicly shared via Power BI Service
+- No embed tokens or authentication needed
+- Data access controlled at Power BI Service level
 
 ### OneDrive Security
-- **Sharing Permissions** - Controlled access levels
-- **Link Expiration** - Time-limited sharing links
-- **Audit Logging** - Access tracking and monitoring
+- Files shared with "Anyone with link can view" permission
+- No sensitive data should be included in shared Excel files
+- Link sharing can be revoked if needed
 
 ## 📊 Performance Optimization
 
+### Current Implementation
+- **Static Site**: No server-side processing or API calls
+- **CDN Delivery**: Azure Static Web Apps provides global CDN
+- **Lazy Loading**: Iframes load content on demand
+- **Minimal JavaScript**: Only essential interactivity code
+
 ### Loading Strategies
-- **Lazy Loading** - Load reports on demand
-- **Caching** - Cache embed tokens and configurations
-- **Compression** - Optimize assets for faster loading
+- **Direct iframe embeds**: No additional loading logic needed
+- **Browser caching**: Static assets cached automatically
+- **HTTPS optimization**: Secure connections for all embeds
 
 ### Monitoring
-- **Azure Application Insights** - Performance monitoring
-- **Power BI Usage Metrics** - Report interaction analytics
-- **CDN Analytics** - Global performance insights
+- **Azure Portal**: View usage statistics and performance metrics
+- **Browser DevTools**: Monitor iframe loading and performance
+- **Simple deployment**: No build process to optimize
 
 ## 🤝 Contributing
 
@@ -316,11 +270,11 @@ const reportConfig = {
 5. **Open** Pull Request
 
 ### Development Guidelines
-- Test embedding on multiple devices
-- Ensure responsive design compliance
-- Validate Power BI and OneDrive integrations
-- Follow security best practices
-- Document new features thoroughly
+- Test iframe embeds on multiple devices and browsers
+- Ensure responsive design works on mobile devices
+- Update iframe URLs when reports or Excel files change
+- Keep the project structure simple (no build tools needed)
+- Document any new embedded content in README
 
 ## 📄 License
 
@@ -345,22 +299,24 @@ copies or substantial portions of the Software.
 **Hugo du Preez**  
 *Portfolio Analytics Dashboard*
 
-- **📧 Email**: [your.email@example.com]
-- **🐙 GitHub**: https://github.com/Hugo-du-Preez
+- **📧 Email**: hugo777dupreez@gmail.com
+- **💼 LinkedIn**: https://www.linkedin.com/in/hugo-du-preez/
+- **🐙 GitHub**: https://github.com/Hugo-du-Preez/
 - **📊 Live Dashboard**: [Update with Azure URL when deployed]
 - **📋 Documentation**: [Link to detailed setup guide]
 
 ### Troubleshooting
-- **Power BI Issues**: Check embed token expiration
-- **OneDrive Issues**: Verify sharing permissions
-- **Azure Issues**: Check deployment logs
+- **Power BI Issues**: Verify the embed URL is still valid and report is published
+- **OneDrive Issues**: Check that sharing link is still active and file permissions allow viewing
+- **Azure Issues**: Check deployment status in Azure portal
+- **Loading Issues**: Ensure stable internet connection for iframe content
 
 ## 🙏 Acknowledgments
 
 - **Microsoft Power BI** - Embedded analytics platform
 - **Microsoft Excel Online** - Cloud spreadsheet integration
 - **Azure Static Web Apps** - Reliable hosting infrastructure
-- **OneDrive API** - File storage and sharing
+- **OneDrive** - File storage and sharing platform
 - **Open Source Community** - Libraries and best practices
 
 ---
