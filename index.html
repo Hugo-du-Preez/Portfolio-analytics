@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Project Analytics Portfolio</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- Inline critical JS for guaranteed menu functionality -->
+    <script>
+        // Critical: Menu toggle function defined immediately
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobileMenu');
+            var toggle = document.getElementById('menuToggle');
+            var overlay = document.getElementById('menuOverlay');
+            
+            if (!menu || !toggle) return;
+            
+            var isOpen = menu.classList.contains('open');
+            
+            if (isOpen) {
+                menu.classList.remove('open');
+                toggle.classList.remove('active');
+                if (overlay) overlay.classList.remove('show');
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+            } else {
+                menu.classList.add('open');
+                toggle.classList.add('active');
+                if (overlay) overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.top = '-' + window.scrollY + 'px';
+            }
+        }
+        
+        function closeMobileMenu() {
+            var menu = document.getElementById('mobileMenu');
+            var toggle = document.getElementById('menuToggle');
+            var overlay = document.getElementById('menuOverlay');
+            var scrollY = document.body.style.top;
+            
+            if (menu) menu.classList.remove('open');
+            if (toggle) toggle.classList.remove('active');
+            if (overlay) overlay.classList.remove('show');
+            
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            
+            if (scrollY) {
+                window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Overlay -->
+    <div id="menuOverlay" class="menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo">📊 Portfolio Analytics</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="#dashboard" class="nav-item">Dashboard</a>
+                <a href="#methodology" class="nav-item">Methodology</a>
+                <a href="#architecture" class="nav-item">Architecture</a>
+                <a href="#data" class="nav-item">Data</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            
+            <!-- Hamburger Button - Guaranteed Working -->
+            <button 
+                type="button" 
+                class="hamburger" 
+                id="menuToggle"
+                onclick="toggleMobileMenu()"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+            >
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation - Full Screen -->
+    <nav class="mobile-nav" id="mobileMenu">
+        <div class="mobile-nav-container">
+            <a href="#dashboard" class="mobile-nav-item" onclick="closeMobileMenu()">
+                <span class="mobile-nav-icon">📈</span>
+                <span class="mobile-nav-text">Dashboard</span>
+            </a>
+            <a href="#methodology" class="mobile-nav-item" onclick="closeMobileMenu()">
+                <span class="mobile-nav-icon">🔧</span>
+                <span class="mobile-nav-text">Methodology</span>
+            </a>
+            <a href="#architecture" class="mobile-nav-item" onclick="closeMobileMenu()">
+                <span class="mobile-nav-icon">🏗️</span>
+                <span class="mobile-nav-text">Architecture</span>
+            </a>
+            <a href="#data" class="mobile-nav-item" onclick="closeMobileMenu()">
+                <span class="mobile-nav-icon">📊</span>
+                <span class="mobile-nav-text">Data</span>
+            </a>
+            <a href="#contact" class="mobile-nav-item" onclick="closeMobileMenu()">
+                <span class="mobile-nav-icon">📧</span>
+                <span class="mobile-nav-text">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Project Management Analytics</h1>
+        <p>End-to-end Business Intelligence solution with Power BI, DAX, and Azure</p>
+        <div class="hero-buttons">
+            <a href="#dashboard" class="btn btn-primary">View Dashboard</a>
+            <a href="https://github.com/YOUR_USERNAME/portfolio-analytics" class="btn btn-secondary" target="_blank">View Code</a>
+        </div>
+        <div class="hero-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Azure</span>
+            <span class="tag">ETL</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section class="section" id="dashboard">
+            <div class="section-header">
+                <h2>Interactive Dashboard</h2>
+                <p>Real-time project insights with embedded Power BI</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>📈 Project Progress Dashboard</h3>
+                    <span class="badge badge-success">
+                        <span class="pulse"></span>
+                        Live Data
+                    </span>
+                </div>
+                <div class="embed-container large">
+                    <iframe 
+                        title="Project Management Dashboard" 
+                        src="https://app.powerbi.com/view?r=eyJrIjoiZGIwMTQ0NWQtYTQ4Yy00NGViLTgwYzMtYjY5MDg2NDdjODA2IiwidCI6ImVhMWE5MDliLTY2MDAtNGEyNS04MmE1LTBjNmVkN2QwNTEzYiIsImMiOjl9" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <span class="feature-icon">📊</span>
+                        <span>Progress Tracking</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">⚠️</span>
+                        <span>Overdue Alerts</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">👥</span>
+                        <span>Resource Load</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎯</span>
+                        <span>Priority Filter</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section class="section" id="methodology">
+            <div class="section-header">
+                <h2>Methodology</h2>
+                <p>Systematic approach from raw data to insights</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-badge">1</div>
+                    <h3>Data Extraction</h3>
+                    <p>Source data from Excel with 100+ task records</p>
+                    <ul class="check-list">
+                        <li>Excel Workbook connection</li>
+                        <li>Multiple project buckets</li>
+                        <li>8 original data fields</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-badge">2</div>
+                    <h3>Power Query Transformation</h3>
+                    <p>ETL pipeline using M language</p>
+                    <ul class="check-list">
+                        <li>Removed Description column</li>
+                        <li>Standardized date formats</li>
+                        <li>Created Priority dimension</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-badge">3</div>
+                    <h3>DAX Data Modeling</h3>
+                    <p>Advanced calculations and relationships</p>
+                    <ul class="check-list">
+                        <li>Custom Date table with CALENDAR()</li>
+                        <li>Active/Inactive relationships</li>
+                        <li>Late task detection measure</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-badge">4</div>
+                    <h3>Visualization & Deployment</h3>
+                    <p>Interactive dashboard on Azure</p>
+                    <ul class="check-list">
+                        <li>Responsive web design</li>
+                        <li>Multi-select slicers</li>
+                        <li>CI/CD with GitHub Actions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section - PERFECT DATA MODEL -->
+        <section class="section" id="architecture">
+            <div class="section-header">
+                <h2>Data Architecture</h2>
+                <p>Star schema with role-playing date dimension</p>
+            </div>
+            
+            <div class="model-card">
+                <h3 class="model-title">Dimensional Model (Star Schema)</h3>
+                
+                <!-- PERFECT DATA MODEL DIAGRAM -->
+                <div class="schema-container">
+                    
+                    <!-- FACT TABLE -->
+                    <div class="table fact">
+                        <div class="table-title fact-title">FACT: Tasks</div>
+                        <div class="table-content">
+                            <div class="row pk">
+                                <span class="key">🔑</span>
+                                <span class="name">TaskID</span>
+                                <span class="type">PK</span>
+                            </div>
+                            <div class="row">
+                                <span class="key"></span>
+                                <span class="name">TaskName</span>
+                                <span class="type"></span>
+                            </div>
+                            <div class="row">
+                                <span class="key"></span>
+                                <span class="name">Project</span>
+                                <span class="type"></span>
+                            </div>
+                            <div class="row">
+                                <span class="key"></span>
+                                <span class="name">AssignedTo</span>
+                                <span class="type"></span>
+                            </div>
+                            <div class="row fk">
+                                <span class="key">🔗</span>
+                                <span class="name">PriorityID</span>
+                                <span class="type">FK→</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row date-active">
+                                <span class="key">📅</span>
+                                <span class="name">DueDate</span>
+                                <span class="type">Active→Date</span>
+                            </div>
+                            <div class="row date-inactive">
+                                <span class="key">📅</span>
+                                <span class="name">CreatedDate</span>
+                                <span class="type">Inactive→Date</span>
+                            </div>
+                            <div class="row date-inactive">
+                                <span class="key">📅</span>
+                                <span class="name">CompletedDate</span>
+                                <span class="type">Inactive→Date</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row calc">
+                                <span class="key">⚡</span>
+                                <span class="name">Late</span>
+                                <span class="type">Calc</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RELATIONSHIP CONNECTORS -->
+                    <div class="connectors">
+                        <div class="connector left">
+                            <div class="line"></div>
+                            <div class="arrow">▶</div>
+                            <div class="label">Many-to-One</div>
+                        </div>
+                        <div class="connector right">
+                            <div class="line"></div>
+                            <div class="arrow">▶</div>
+                            <div class="label">Many-to-One (3x)</div>
+                        </div>
+                    </div>
+                    
+                    <!-- DIMENSION TABLES -->
+                    <div class="dimensions">
+                        <div class="table dim">
+                            <div class="table-title dim-title">DIM: Priority</div>
+                            <div class="table-content">
+                                <div class="row pk">
+                                    <span class="key">🔑</span>
+                                    <span class="name">PriorityID</span>
+                                    <span class="type">PK</span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">PriorityName</span>
+                                    <span class="type"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">SortOrder</span>
+                                    <span class="type"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="table dim wide">
+                            <div class="table-title dim-title">DIM: Date (Role-Playing)</div>
+                            <div class="table-content">
+                                <div class="row pk">
+                                    <span class="key">🔑</span>
+                                    <span class="name">Date</span>
+                                    <span class="type">PK</span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">Year</span>
+                                    <span class="type"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">Month</span>
+                                    <span class="type"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">Quarter</span>
+                                    <span class="type"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="key"></span>
+                                    <span class="name">DayName</span>
+                                    <span class="type"></span>
+                                </div>
+                                <div class="note">Used for Due, Created, Completed dates</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- RELATIONSHIP LEGEND -->
+                <div class="legend">
+                    <div class="legend-row">
+                        <span class="badge active">Active</span>
+                        <span>DueDate → Date (Default filtering)</span>
+                    </div>
+                    <div class="legend-row">
+                        <span class="badge inactive">Inactive</span>
+                        <span>CreatedDate → Date (USERELATIONSHIP)</span>
+                    </div>
+                    <div class="legend-row">
+                        <span class="badge inactive">Inactive</span>
+                        <span>CompletedDate → Date (USERELATIONSHIP)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DAX Code -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>📐 Key DAX Measures</h3>
+                </div>
+                <div class="card-body">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Date Table Creation</span>
+                            <button class="btn-copy" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code>Date = CALENDAR(
+    MIN(Tasks[Start Date]),
+    MAX(Tasks[Due Date])
+)
+
+Year = YEAR([Date])
+Month = FORMAT([Date], "MMMM")
+Quarter = "Q" & QUARTER([Date])</code></pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Late Task Detection</span>
+                            <button class="btn-copy" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code>Late = 
+VAR DueDate = Tasks[Due Date]
+VAR CompletedDate = Tasks[Completed Date]
+VAR IsCompleted = NOT(ISBLANK(CompletedDate))
+
+RETURN
+    IF(
+        IsCompleted && CompletedDate > DueDate, TRUE(),
+        IF(!IsCompleted && DueDate < TODAY(), TRUE(), FALSE())
+    )</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Section - EMBEDDED EXCEL FROM ONEDRIVE -->
+        <section class="section" id="data">
+            <div class="section-header">
+                <h2>Data & Downloads</h2>
+                <p>Explore source data and download the Power BI report</p>
+            </div>
+            
+            <!-- EMBEDDED EXCEL FROM ONEDRIVE -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>📊 Project Data (Excel)</h3>
+                    <span class="badge badge-info">OneDrive Embedded</span>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                        Interactive Excel workbook embedded from OneDrive.Explore the source dataset used for this analysis.
+                    </p>
+                    <div class="embed-container medium">
+                        <iframe 
+                            src="https://1drv.ms/x/c/d35fa6b00a45c75e/IQR7jFtolxMTT5YrMZIQpX9qAdht1NdJexXldgBYzreMo4s" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            scrolling="no"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DOWNLOAD POWER BI ONLY -->
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">📊</div>
+                    <h4>Power BI Report</h4>
+                    <p>Full .pbix file with complete data model, DAX measures, and visualizations</p>
+                    <div class="file-info">
+                        <span>2.4 MB</span>
+                        <span>.pbix</span>
+                    </div>
+                    <a href="reports/ProjectAnalytics_Portfolio.pbix.pbix" class="btn btn-primary" download>
+                        Download Report
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>🛠️ Technology Stack</h3>
+                </div>
+                <div class="card-body">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon">☁️</div>
+                            <h4>Azure Static Web Apps</h4>
+                            <p>Free tier hosting with global CDN</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">📊</div>
+                            <h4>Power BI Embedded</h4>
+                            <p>Interactive visualizations</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔄</div>
+                            <h4>GitHub Actions</h4>
+                            <p>CI/CD automation</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">💾</div>
+                            <h4>OneDrive</h4>
+                            <p>Excel embedding & file storage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Interested in discussing this project?</p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:hugo777dupreez@gmail.com" class="contact-link">
+                    <span>📧</span>
+                    <span>hugo777dupreez@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hugo-du-preez/" class="contact-link" target="_blank">
+                    <span>💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Hugo-du-Preez" class="contact-link" target="_blank">
+                    <span>🐙</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Hugo du Preez. Built with Power BI, Azure, and dedication.</p>
+        <div class="footer-nav">
+            <a href="https://github.com/YOUR_USERNAME/portfolio-analytics">View Source</a>
+            <a href="#dashboard">Back to Top</a>
+        </div>
+    </footer>
+
+    <!-- External JS for non-critical features -->
+    <script src="src/css/js/app.js"></script>
+</body>
+</html>
