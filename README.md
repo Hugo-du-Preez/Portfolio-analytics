@@ -301,8 +301,8 @@ copies or substantial portions of the Software.
 
 - **📧 Email**: hugo777dupreez@gmail.com
 - **💼 LinkedIn**: https://www.linkedin.com/in/hugo-du-preez/
-- **🐙 GitHub**: https://github.com/Hugo-du-Preez/Portfolio-analytics
-- **📊 Live Dashboard**: https://white-meadow-022a87d10.1.azurestaticapps.net/#contact
+- **🐙 GitHub**: https://github.com/Hugo-du-Preez/
+- **📊 Live Dashboard**: https://white-meadow-022a87d10.1.azurestaticapps.net/
 - **📋 Documentation**: [Link to detailed setup guide]
 
 ### Troubleshooting
