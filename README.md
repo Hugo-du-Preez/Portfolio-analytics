@@ -1,4 +1,110 @@
+# 📊 Portfolio Analytics
 
+A modern, responsive portfolio website showcasing data analytics projects and methodologies. Built with vanilla HTML, CSS, and JavaScript, and deployed on Azure Static Web Apps.
+
+## 🌟 Features
+
+- **Responsive Design**: Mobile-first approach with adaptive navigation
+- **Interactive Dashboard**: Visual analytics portfolio showcase
+- **Methodology Section**: Detailed approach to data analysis
+- **Architecture Overview**: System design and data flow diagrams
+- **Data Insights**: Sample datasets and analysis techniques
+- **Contact Integration**: Professional contact information
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Styling**: Custom CSS with mobile-responsive design
+- **Deployment**: Azure Static Web Apps
+- **CI/CD**: GitHub Actions
+- **Analytics Tools**: Power BI (sample reports included)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- A modern web browser
+- Git (for cloning the repository)
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Hugo-du-Preez/Portfolio-analytics.git
+   cd Portfolio-analytics
+   ```
+
+2. **Open in browser**
+   - Open `index.html` directly in your browser
+   - Or use a local server for better development experience
+
+3. **Navigate the site**
+   - Use the navigation menu to explore different sections
+   - Mobile menu is available on smaller screens
+
+## 📁 Project Structure
+
+```
+Portfolio-analytics/
+├── index.html              # Main portfolio page
+├── src/
+│   └── css/
+│       ├── styles.css      # Main stylesheet
+│       └── js/
+│           └── app.js      # Non-critical JavaScript
+├── reports/
+│   ├── README.md           # Power BI report documentation
+│   └── *.pbix              # Power BI report files
+├── .github/
+│   └── workflows/
+│       └── azure-static-web-apps.yml  # CI/CD pipeline
+└── README.md               # This file
+```
+
+## 🌐 Deployment
+
+This project is configured for automatic deployment to Azure Static Web Apps via GitHub Actions.
+
+### Azure Static Web Apps Setup
+
+1. **Create Azure Static Web App**
+   - Go to [Azure Portal](https://portal.azure.com)
+   - Create a new Static Web App
+   - Connect your GitHub repository
+   - Configure build settings:
+     - **Source**: GitHub
+     - **Branch**: main
+     - **Build Preset**: Custom
+     - **App location**: `/`
+     - **API location**: (leave empty)
+     - **Output location**: `.`
+
+2. **Environment Variables**
+   - The workflow uses `AZURE_STATIC_WEB_APPS_API_TOKEN`
+   - This is automatically set when connecting the repository in Azure Portal
+
+## 📊 Analytics Reports
+
+The `reports/` directory contains sample Power BI reports:
+
+- **ProjectManagementDashboard.pbix**: Interactive project management dashboard
+  - Task progress tracking
+  - Resource allocation visualization
+  - Overdue task monitoring
+  - Priority-based filtering
+
+## 📞 Contact
+
+**Hugo du Preez**
+
+- **Portfolio**: [Your Live Site URL]
+- **GitHub**: https://github.com/Hugo-du-Preez
+- **Email**: [your.email@example.com]
+
+---
+
+*Built with ❤️ by Hugo du Preez for data analytics professionals*</content>
+<parameter name="filePath">c:\Users\hugo7\Desktop\Portfolio-analytics\README.md
 # 📊 Portfolio Analytics
 
 [![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
