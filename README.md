@@ -1,629 +1,377 @@
-# 📊 Portfolio Analytics
+# 📊 Portfolio Analytics Dashboard
 
-[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
-[![GitHub Actions Workflow](https://img.shields.io/github/actions/workflow/status/Hugo-du-Preez/Portfolio-analytics/azure-static-web-apps.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/Hugo-du-Preez/Portfolio-analytics/actions)
+[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Free%20Tier-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Embedded-orange?style=for-the-badge&logo=power-bi)](https://powerbi.microsoft.com/)
+[![Excel Online](https://img.shields.io/badge/Excel-Online-green?style=for-the-badge&logo=microsoft-excel)](https://www.microsoft.com/en-us/microsoft-365/excel)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-Design-green?style=for-the-badge&logo=device)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
 
-> A modern, responsive web application for portfolio analytics and data visualization. Built with vanilla HTML, CSS, and JavaScript, featuring interactive dashboards and deployed on Azure Static Web Apps.
+> A modern web dashboard featuring **embedded live Power BI reports** and **interactive Excel data from OneDrive**, deployed on Azure Static Web Apps Free Tier. Built with vanilla JavaScript for optimal performance and seamless integration.
 
-## 📋 Project Overview
+## 🌟 Key Features
 
-This project is a **Portfolio Analytics Web Application** that provides:
-- Interactive data visualization dashboards
-- Responsive design optimized for all devices
-- Modern web technologies implementation
-- Azure Static Web Apps deployment
-- Power BI report integration examples
+- **📊 Live Power BI Reports** - Embedded, interactive business intelligence dashboards
+- **📈 Excel Data Integration** - Real-time Excel data from OneDrive with live updates
+- **☁️ Cloud-Hosted** - Azure Static Web Apps Free Tier deployment
+- **📱 Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **⚡ Fast Loading** - Lightweight vanilla JavaScript implementation
+- **🔄 Real-time Updates** - Live data synchronization with Microsoft services
+- **🎨 Modern UI** - Clean, professional dashboard interface
 
-## 🌟 Features
+## 🏗️ Architecture Overview
 
-- **📊 Interactive Dashboard** - Real-time data visualization
-- **📱 Mobile Responsive** - Works perfectly on all screen sizes
-- **⚡ Fast Performance** - Lightweight vanilla JavaScript implementation
-- **🎨 Modern UI** - Clean, professional design
-- **🔧 Easy Deployment** - Automated CI/CD with GitHub Actions
-- **📈 Analytics Integration** - Power BI report examples
+```
+Portfolio Analytics Dashboard
+├── 📊 Power BI Embedded Reports
+│   ├── Live Dashboard Views
+│   ├── Interactive Filters
+│   └── Real-time Data Updates
+├── 📋 Excel Online Integration
+│   ├── OneDrive Data Sources
+│   ├── Embedded Spreadsheets
+│   └── Live Data Synchronization
+└── ☁️ Azure Static Web Apps
+    ├── Free Tier Hosting
+    ├── Global CDN
+    └── Automatic Scaling
+```
 
 ## 🛠️ Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
-| **Frontend** | HTML5, CSS3, JavaScript | User interface and interactions |
-| **Styling** | Custom CSS | Responsive design and animations |
-| **Deployment** | Azure Static Web Apps | Cloud hosting and CDN |
-| **CI/CD** | GitHub Actions | Automated deployment pipeline |
-| **Analytics** | Power BI | Report examples and data visualization |
-| **Version Control** | Git & GitHub | Code management and collaboration |
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Web browser (Chrome, Firefox, Safari, Edge)
-- Git for cloning
-- Internet connection for deployment
-
-### Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Hugo-du-Preez/Portfolio-analytics.git
-   cd Portfolio-analytics
-   ```
-
-2. **Run locally**
-   ```bash
-   # Simple method - open directly
-   # Double-click index.html or drag to browser
-
-   # Or use local server
-   python -m http.server 8000
-   # Visit: http://localhost:8000
-   ```
-
-3. **View the application**
-   - Navigate through different sections
-   - Test responsive design
-   - Interact with dashboard elements
-
-## 📁 Project Structure
-
-```
-Portfolio-analytics/
-├── index.html                 # Main application page
-├── src/
-│   └── css/
-│       ├── styles.css         # Application styles
-│       └── js/
-│           └── app.js         # Application logic
-├── reports/
-│   ├── README.md              # Report documentation
-│   └── *.pbix                 # Power BI report files
-├── .github/
-│   └── workflows/
-│       └── azure-static-web-apps.yml  # CI/CD configuration
-├── .gitignore                 # Git ignore rules
-├── LICENSE                    # MIT license
-└── README.md                  # This documentation
-```
-
-## 🌐 Deployment on Azure Static Web Apps
-
-### Automated Deployment Setup
-
-1. **Create Azure Static Web App**
-   - Go to [Azure Portal](https://portal.azure.com)
-   - Search for "Static Web Apps"
-   - Click "Create"
-
-2. **Configure Application**
-   - **Subscription**: Select your subscription
-   - **Resource Group**: Create or select existing
-   - **Name**: Choose unique app name
-   - **Hosting Plan**: Free tier available
-
-3. **Connect GitHub Repository**
-   - **Source**: GitHub
-   - **Organization**: Hugo-du-Preez
-   - **Repository**: Portfolio-analytics
-   - **Branch**: main
-
-4. **Build Configuration**
-   - **Build Preset**: Custom
-   - **App Location**: `/`
-   - **API Location**: *(leave empty)*
-   - **Output Location**: `.`
-
-5. **Deploy**
-   - Azure automatically builds and deploys
-   - Get your live URL (e.g., `https://your-app.azurestaticapps.net`)
-
-### Environment Variables
-- `AZURE_STATIC_WEB_APPS_API_TOKEN` - Auto-generated during setup
-
-## 📊 Application Features
-
-### Dashboard Components
-- **Data Visualization** - Interactive charts and graphs
-- **Analytics Metrics** - Key performance indicators
-- **Responsive Layout** - Adapts to screen size
-- **Modern Interface** - Clean, professional design
-
-### Technical Features
-- **Vanilla JavaScript** - No framework dependencies
-- **CSS Grid & Flexbox** - Modern layout techniques
-- **Mobile-First Design** - Responsive breakpoints
-- **Performance Optimized** - Fast loading times
-
-## 🎨 Customization
-
-### Modifying Styles
-```css
-/* Edit src/css/styles.css */
-:root {
-  --primary-color: #your-color;
-  --font-family: 'Your Font', sans-serif;
-}
-```
-
-### Adding Features
-```javascript
-// Edit src/css/js/app.js
-function newFeature() {
-  // Add your custom functionality
-}
-```
-
-### Content Updates
-- Modify `index.html` for content changes
-- Update navigation and sections
-- Add new dashboard components
-
-## 🔧 Development
-
-### Local Development
-```bash
-# Start development server
-python -m http.server 8000
-
-# Open browser to http://localhost:8000
-```
-
-### Code Quality
-- Follow HTML5 semantic structure
-- Use CSS custom properties for theming
-- Write clean, readable JavaScript
-- Test across different browsers
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/new-feature`)
-3. Commit changes (`git commit -m 'Add new feature'`)
-4. Push to branch (`git push origin feature/new-feature`)
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
-
-```
-MIT License
-
-Copyright (c) 2026 Hugo du Preez
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
-## 📞 Contact
-
-**Hugo du Preez**  
-*Portfolio Analytics Project*
-
-- **📧 Email**: [your.email@example.com]
-- **🐙 GitHub**: https://github.com/Hugo-du-Preez
-- **🌐 Live Demo**: [Update with Azure URL when deployed]
-
-## 🙏 Acknowledgments
-
-- **Azure Static Web Apps** - Hosting platform
-- **GitHub Actions** - CI/CD automation
-- **Power BI** - Analytics inspiration
-- **Open Source Community** - Best practices and tools
-
----
-
-<div align="center">
-
-**Portfolio Analytics Web Application**  
-*Built with modern web technologies for Azure Static Web Apps*
-
-⭐ **Star this repository** if you find it useful!
-
-</div># 📊 Portfolio Analytics
-
-[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
-[![GitHub Actions Workflow](https://img.shields.io/github/actions/workflow/status/Hugo-du-Preez/Portfolio-analytics/azure-static-web-apps.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/Hugo-du-Preez/Portfolio-analytics/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-Design-green?style=for-the-badge&logo=device)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
-
-> A professional portfolio website showcasing data analytics expertise, featuring interactive dashboards, methodology documentation, and project case studies. Built with modern web technologies and deployed on Azure Static Web Apps.
-
-## 🌟 Key Features
-
-- **📊 Interactive Analytics Dashboard** - Visual representation of data insights
-- **📱 Fully Responsive Design** - Optimized for all devices and screen sizes
-- **🔬 Data Analysis Methodology** - Comprehensive approach to analytics projects
-- **🏗️ System Architecture** - Technical implementation details
-- **📈 Power BI Integration** - Sample reports and dashboard examples
-- **⚡ Fast & Lightweight** - No frameworks, pure vanilla implementation
-- **🎨 Modern UI/UX** - Clean, professional design with smooth animations
-
-## 🛠️ Technology Stack
-
-| Component | Technology |
-|-----------|------------|
-| **Frontend** | HTML5, CSS3, ES6+ JavaScript |
-| **Styling** | Custom CSS with CSS Grid & Flexbox |
-| **Deployment** | Azure Static Web Apps |
-| **CI/CD** | GitHub Actions |
-| **Analytics** | Power BI Desktop |
-| **Version Control** | Git & GitHub |
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Git for version control
-- Internet connection for deployment
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Hugo-du-Preez/Portfolio-analytics.git
-   cd Portfolio-analytics
-   ```
-
-2. **Run locally**
-   ```bash
-   # Option 1: Simple file opening
-   # Double-click index.html or open in browser
-
-   # Option 2: Local server (recommended)
-   python -m http.server 8000
-   # Visit: http://localhost:8000
-   ```
-
-3. **Explore the site**
-   - Navigate through different sections
-   - Test responsive design on various screen sizes
-   - Interact with dashboard elements
-
-## 📁 Project Structure
-
-```
-Portfolio-analytics/
-├── index.html                 # Main portfolio page
-├── src/
-│   └── css/
-│       ├── styles.css         # Main stylesheet
-│       └── js/
-│           └── app.js         # Interactive JavaScript
-├── reports/
-│   ├── README.md              # Report documentation
-│   └── *.pbix                 # Power BI files
-├── .github/
-│   └── workflows/
-│       └── azure-static-web-apps.yml
-├── .gitignore                 # Git ignore rules
-├── LICENSE                    # MIT License
-└── README.md                  # Project documentation
-```
-
-## 🌐 Deployment
-
-### Azure Static Web Apps Setup
-
-1. **Create Resource**
-   - Azure Portal → Static Web Apps → Create
-   - Select subscription and resource group
-
-2. **Connect Repository**
-   - Source: GitHub
-   - Organization: Hugo-du-Preez
-   - Repository: Portfolio-analytics
-   - Branch: main
-
-3. **Build Configuration**
-   - Build Preset: Custom
-   - App location: `/`
-   - API location: *(empty)*
-   - Output location: `.`
-
-4. **Deploy**
-   - Azure handles CI/CD automatically
-   - Site goes live in minutes
-
-## 📊 Analytics Showcase
-
-### Power BI Dashboard Features
-- **Task Management** - Progress tracking and status monitoring
-- **Resource Allocation** - Team utilization visualization
-- **Timeline Analysis** - Project scheduling and deadlines
-- **Performance Metrics** - KPI tracking and reporting
-- **Interactive Filters** - Dynamic data exploration
-
-### Technical Implementation
-- Custom calendar tables for date intelligence
-- Role-playing dimensions for flexible analysis
-- Conditional formatting for visual indicators
-- Slicers and filters for user interaction
-
-## 🎨 Customization
-
-### Styling
-- Modify `src/css/styles.css` for visual changes
-- CSS custom properties for consistent theming
-- Responsive breakpoints: 768px, 1024px
-- Smooth transitions and hover effects
-
-### Content
-- Update portfolio sections in `index.html`
-- Modify navigation and contact information
-- Add new projects or case studies
-- Customize dashboard examples
-
-### Functionality
-- Enhance interactions in `src/css/js/app.js`
-- Add new features or animations
-- Improve accessibility and performance
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how to get involved:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/new-feature`)
-3. **Commit** changes (`git commit -m 'Add new feature'`)
-4. **Push** to branch (`git push origin feature/new-feature`)
-5. **Open** a Pull Request
-
-### Guidelines
-- Maintain responsive design principles
-- Test across different browsers and devices
-- Follow semantic HTML structure
-- Keep code clean and well-documented
-- Ensure accessibility compliance
-
-## 📄 License
-
-```
-MIT License
-
-Copyright (c) 2026 Hugo du Preez
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
-## 📞 Contact
-
-**Hugo du Preez** 👋  
-*Data Analytics Professional*
-
-- **📧 Email**: [your.email@example.com]
-- **🐙 GitHub**: [https://github.com/Hugo-du-Preez](https://github.com/Hugo-du-Preez)
-- **💼 LinkedIn**: [Your LinkedIn Profile]
-- **🌐 Live Portfolio**: [Update with Azure URL when deployed]
-
-## 🙏 Acknowledgments
-
-- **Azure Static Web Apps** - Reliable hosting platform
-- **Power BI** - Advanced analytics and visualization
-- **GitHub Actions** - Automated deployment pipeline
-- **Open Source Community** - Inspiration and best practices
-
----
-
-<div align="center">
-
-**Built with ❤️ by Hugo du Preez**  
-*Showcasing the power of data-driven insights*
-
-⭐ **Star this repo** if you find it helpful!
-
-</div></content>
-<parameter name="filePath">c:\Users\hugo7\Desktop\Portfolio-analytics\README.md
-# 📊 Portfolio Analytics
-
-[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
-[![CI](https://img.shields.io/github/actions/workflow/status/Hugo-du-Preez/Portfolio-analytics/azure-static-web-apps.yml)](https://github.com/Hugo-du-Preez/Portfolio-analytics/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-Design-green?style=for-the-badge&logo=device)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
-
-A modern, responsive portfolio website showcasing data analytics projects and methodologies. Built with vanilla HTML, CSS, and JavaScript, and deployed on Azure Static Web Apps.
-
-## 🌟 Features
-
-- **Responsive Design**: Mobile-first approach with adaptive navigation
-- **Interactive Dashboard**: Visual analytics portfolio showcase
-- **Methodology Section**: Detailed approach to data analysis
-- **Architecture Overview**: System design and data flow diagrams
-- **Data Insights**: Sample datasets and analysis techniques
-- **Contact Integration**: Professional contact information
-
-## 🛠️ Technologies Used
-
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Styling**: Custom CSS with mobile-responsive design
-- **Deployment**: Azure Static Web Apps
-- **CI/CD**: GitHub Actions
-- **Analytics Tools**: Power BI (sample reports included)
+| **Frontend** | HTML5, CSS3, JavaScript | Dashboard interface and interactions |
+| **Power BI** | Power BI Embedded | Live report embedding and visualization |
+| **Excel** | Excel Online / OneDrive | Data source and spreadsheet embedding |
+| **Hosting** | Azure Static Web Apps | Cloud deployment and CDN |
+| **Authentication** | Microsoft Account | Secure access to reports and data |
+| **APIs** | Power BI REST API | Report embedding and data access |
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+- ✅ Microsoft Account (for Power BI and OneDrive access)
+- ✅ Power BI Pro license (for report embedding)
+- ✅ OneDrive account with Excel files
+- ✅ Modern web browser
+- ✅ Azure account (for deployment)
 
-- A modern web browser
-- Git (for cloning the repository)
-
-### Local Development
+### Local Development Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Hugo-du-Preez/portfolio-analytics.git
-   cd portfolio-analytics
+   git clone https://github.com/Hugo-du-Preez/Portfolio-analytics.git
+   cd Portfolio-analytics
    ```
 
-2. **Open in browser**
-   - Open `index.html` directly in your browser
-   - Or use a local server for better development experience:
-     ```bash
-     # Using Python (if available)
-     python -m http.server 8000
+2. **Configure Microsoft Services**
+   ```javascript
+   // Update config in src/js/config.js
+   const config = {
+     powerBI: {
+       clientId: 'your-powerbi-client-id',
+       authority: 'https://login.microsoftonline.com/your-tenant-id',
+       reportId: 'your-report-id',
+       groupId: 'your-workspace-id'
+     },
+     oneDrive: {
+       clientId: 'your-onedrive-client-id',
+       fileId: 'your-excel-file-id'
+     }
+   };
+   ```
 
-     # Using Node.js (if available)
-     npx serve .
+3. **Run locally**
+   ```bash
+   # Start local server
+   python -m http.server 8000
+   # Visit: http://localhost:8000
+   ```
 
-     # Using PHP (if available)
-     php -S localhost:8000
-     ```
+## 📊 Power BI Report Embedding
 
-3. **Navigate the site**
-   - Use the navigation menu to explore different sections
-   - Mobile menu is available on smaller screens
+### Setup Process
+
+1. **Create Power BI Report**
+   - Design your dashboard in Power BI Desktop
+   - Publish to Power BI Service workspace
+
+2. **Configure Embedding**
+   ```javascript
+   // Power BI embedding configuration
+   const embedConfig = {
+     type: 'report',
+     id: 'your-report-id',
+     embedUrl: 'https://app.powerbi.com/reportEmbed',
+     accessToken: 'your-access-token',
+     settings: {
+       filterPaneEnabled: true,
+       navContentPaneEnabled: true
+     }
+   };
+   ```
+
+3. **Authentication Setup**
+   - Register Azure AD application
+   - Configure API permissions
+   - Generate access tokens
+
+### Embedding Features
+- **Interactive Filters** - Dynamic data exploration
+- **Responsive Layout** - Adapts to container size
+- **Export Options** - PDF, PowerPoint, Excel export
+- **Mobile Optimization** - Touch-friendly interactions
+
+## 📋 Excel OneDrive Integration
+
+### OneDrive Excel Embedding
+
+1. **Upload Excel File**
+   - Store your Excel file in OneDrive
+   - Ensure sharing permissions are set
+
+2. **Generate Embed Code**
+   ```html
+   <!-- Excel Online embed code -->
+   <iframe
+     src="https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=!YOUR_AUTH_KEY&em=2&wdAllowInteractivity=False"
+     width="100%"
+     height="600px"
+     frameborder="0">
+   </iframe>
+   ```
+
+3. **Live Data Updates**
+   - Changes in OneDrive reflect immediately
+   - Real-time data synchronization
+   - Collaborative editing support
+
+### Excel Features
+- **Live Data Binding** - Real-time updates from OneDrive
+- **Interactive Charts** - Embedded Excel charts and graphs
+- **Formula Calculations** - Live computation and updates
+- **Data Validation** - Form controls and validation rules
+
+## ☁️ Azure Static Web Apps Deployment
+
+### Free Tier Setup
+
+1. **Create Azure Static Web App**
+   ```bash
+   # Via Azure CLI
+   az staticwebapp create \
+     --name "portfolio-analytics" \
+     --resource-group "your-resource-group" \
+     --source "https://github.com/Hugo-du-Preez/Portfolio-analytics" \
+     --location "Central US" \
+     --sku "Free"
+   ```
+
+2. **Configure Build Settings**
+   ```json
+   {
+     "buildCommand": "echo 'No build required'",
+     "outputLocation": ".",
+     "apiLocation": "",
+     "appLocation": "/"
+   }
+   ```
+
+3. **Environment Variables**
+   ```bash
+   # Set in Azure Portal or CLI
+   az staticwebapp environment-variables set \
+     --name "portfolio-analytics" \
+     --environment-variables \
+     POWERBI_CLIENT_ID="your-client-id" \
+     ONEDRIVE_CLIENT_ID="your-onedrive-id"
+   ```
+
+### Free Tier Benefits
+- **100 GB Bandwidth** per month
+- **0.5 GB Storage** included
+- **Custom Domains** support
+- **Global CDN** distribution
+- **SSL Certificates** included
+
+## 🔧 Configuration Guide
+
+### Power BI Setup
+
+1. **Register Application**
+   ```bash
+   # Azure AD App Registration
+   az ad app create --display-name "Portfolio Analytics"
+   ```
+
+2. **Configure Permissions**
+   - Power BI Service: Report.ReadWrite.All
+   - Azure AD: User.Read
+
+3. **Embed Token Generation**
+   ```javascript
+   // Generate embed token
+   const embedToken = await powerbi.getEmbedToken(reportId, datasets);
+   ```
+
+### OneDrive Setup
+
+1. **File Permissions**
+   - Set OneDrive file to "Anyone with link can view"
+   - Generate embed URL from OneDrive
+
+2. **Excel Online Integration**
+   ```javascript
+   // OneDrive Excel API integration
+   const excelUrl = `https://graph.microsoft.com/v1.0/me/drive/items/${fileId}/workbook/worksheets`;
+   ```
 
 ## 📁 Project Structure
 
 ```
-portfolio-analytics/
-├── index.html              # Main portfolio page
+Portfolio-analytics/
+├── index.html                    # Main dashboard page
 ├── src/
-│   └── css/
-│       ├── styles.css      # Main stylesheet
-│       └── js/
-│           └── app.js      # Non-critical JavaScript
-├── reports/
-│   ├── README.md           # Power BI report documentation
-│   └── *.pbix              # Power BI report files
+│   ├── css/
+│   │   ├── styles.css           # Dashboard styling
+│   │   └── responsive.css       # Mobile optimizations
+│   └── js/
+│       ├── config.js            # API configurations
+│       ├── powerbi.js           # Power BI embedding logic
+│       ├── onedrive.js          # Excel integration
+│       └── dashboard.js         # Main dashboard controller
+├── assets/
+│   ├── images/                  # Dashboard images
+│   └── icons/                   # UI icons
 ├── .github/
 │   └── workflows/
-│       └── azure-static-web-apps.yml  # CI/CD pipeline
-└── README.md               # This file
+│       └── azure-static-web-apps.yml
+├── README.md                    # This documentation
+└── package.json                 # Dependencies (if any)
 ```
-
-## 🌐 Deployment
-
-This project is configured for automatic deployment to Azure Static Web Apps via GitHub Actions.
-
-### Azure Static Web Apps Setup
-
-1. **Create Azure Static Web App**
-   - Go to [Azure Portal](https://portal.azure.com)
-   - Create a new Static Web App
-   - Connect your GitHub repository
-   - Configure build settings:
-     - **Source**: GitHub
-     - **Branch**: main
-     - **Build Preset**: Custom
-     - **App location**: `/`
-     - **API location**: (leave empty)
-     - **Output location**: `.`
-
-2. **Environment Variables**
-   - The workflow uses `AZURE_STATIC_WEB_APPS_API_TOKEN`
-   - This is automatically set when connecting the repository in Azure Portal
-
-3. **Custom Domain (Optional)**
-   - Configure custom domain in Azure Static Web Apps
-   - Update DNS records as instructed
-
-### Manual Deployment
-
-If you prefer manual deployment:
-
-1. Build the site (no build step required for static site)
-2. Upload files to Azure Storage or any static hosting service
-3. Ensure all paths are relative
-
-## 📊 Analytics Reports
-
-The `reports/` directory contains sample Power BI reports:
-
-- **ProjectManagementDashboard.pbix**: Interactive project management dashboard
-  - Task progress tracking
-  - Resource allocation visualization
-  - Overdue task monitoring
-  - Priority-based filtering
-
-### Report Features
-
-- Custom calendar table for date intelligence
-- Role-playing dimensions (Due Date, Created Date, Completed Date)
-- Key performance indicators
-- Interactive slicers and filters
 
 ## 🎨 Customization
 
-### Styling
+### Dashboard Themes
+```css
+/* Custom theme variables */
+:root {
+  --primary-color: #0078d4;
+  --secondary-color: #106ebe;
+  --background-color: #f8f9fa;
+  --text-color: #323130;
+}
+```
 
-- Main styles are in `src/css/styles.css`
-- CSS custom properties (variables) are used for theming
-- Mobile breakpoints: 768px and 1024px
+### Report Configuration
+```javascript
+// Customize embedded reports
+const reportConfig = {
+  filters: [
+    {
+      $schema: "http://powerbi.com/product/schema#basic",
+      target: { table: "Sales", column: "Region" },
+      operator: "In",
+      values: ["North", "South"]
+    }
+  ],
+  settings: {
+    panes: {
+      filters: { visible: true },
+      pageNavigation: { visible: true }
+    }
+  }
+};
+```
 
-### Content
+## 🔐 Security Considerations
 
-- Update section content directly in `index.html`
-- Modify navigation links in the header
-- Add new sections by following the existing structure
+### Power BI Security
+- **Row-level Security (RLS)** - User-specific data access
+- **Embed Tokens** - Time-limited access tokens
+- **Azure AD Integration** - Secure authentication
 
-### JavaScript
+### OneDrive Security
+- **Sharing Permissions** - Controlled access levels
+- **Link Expiration** - Time-limited sharing links
+- **Audit Logging** - Access tracking and monitoring
 
-- Critical JS (menu functionality) is inline in HTML
-- Non-critical JS is in `src/css/js/app.js`
-- Uses vanilla JavaScript with modern ES6+ features
+## 📊 Performance Optimization
+
+### Loading Strategies
+- **Lazy Loading** - Load reports on demand
+- **Caching** - Cache embed tokens and configurations
+- **Compression** - Optimize assets for faster loading
+
+### Monitoring
+- **Azure Application Insights** - Performance monitoring
+- **Power BI Usage Metrics** - Report interaction analytics
+- **CDN Analytics** - Global performance insights
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. **Fork** the repository
+2. **Create** feature branch (`git checkout -b feature/new-dashboard`)
+3. **Commit** changes (`git commit -m 'Add new dashboard component'`)
+4. **Push** branch (`git push origin feature/new-dashboard`)
+5. **Open** Pull Request
 
 ### Development Guidelines
-
-- Maintain responsive design principles
-- Test on multiple devices and browsers
-- Keep JavaScript vanilla (no frameworks)
-- Follow semantic HTML practices
-- Optimize images and assets
+- Test embedding on multiple devices
+- Ensure responsive design compliance
+- Validate Power BI and OneDrive integrations
+- Follow security best practices
+- Document new features thoroughly
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+MIT License
 
-## 📞 Contact
+Copyright (c) 2026 Hugo du Preez
 
-**Hugo du Preez**
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-- **Portfolio**: [Your Live Site URL]
-- **GitHub**: [https://github.com/Hugo-du-Preez]
-- **LinkedIn**: [https://www.linkedin.com/in/hugo-du-preez/]
-- **Email**: [hugo777dupreez@gmail.com]
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
+
+## 📞 Support & Contact
+
+**Hugo du Preez**  
+*Portfolio Analytics Dashboard*
+
+- **📧 Email**: [your.email@example.com]
+- **🐙 GitHub**: https://github.com/Hugo-du-Preez
+- **📊 Live Dashboard**: [Update with Azure URL when deployed]
+- **📋 Documentation**: [Link to detailed setup guide]
+
+### Troubleshooting
+- **Power BI Issues**: Check embed token expiration
+- **OneDrive Issues**: Verify sharing permissions
+- **Azure Issues**: Check deployment logs
 
 ## 🙏 Acknowledgments
 
-- Azure Static Web Apps for hosting
-- Power BI for analytics capabilities
-- GitHub Actions for CI/CD automation
-- Modern CSS techniques and best practices
+- **Microsoft Power BI** - Embedded analytics platform
+- **Microsoft Excel Online** - Cloud spreadsheet integration
+- **Azure Static Web Apps** - Reliable hosting infrastructure
+- **OneDrive API** - File storage and sharing
+- **Open Source Community** - Libraries and best practices
 
 ---
 
-*Built with ❤️ by Hugo du Preez for data analytics professionals*
+<div align="center">
+
+**Portfolio Analytics Dashboard**  
+*Live Power BI Reports + Excel Data Integration*
+
+*Hosted on Azure Static Web Apps Free Tier*
+
+⭐ **Star this repository** to support the project!
+
+</div>
