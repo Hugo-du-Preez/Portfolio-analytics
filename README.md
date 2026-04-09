@@ -177,6 +177,209 @@ copies or substantial portions of the Software.
 
 ## 📞 Contact
 
+**Hugo du Preez** 👋
+*Data Analytics Professional*
+
+- **📧 Email**: [your.email@example.com]
+- **🐙 GitHub**: https://github.com/Hugo-du-Preez
+- **💼 LinkedIn**: [Your LinkedIn Profile]
+- **🌐 Live Portfolio**: [Update with Azure URL when deployed]
+
+## 🙏 Acknowledgments
+
+- **Azure Static Web Apps** - Reliable hosting platform
+- **Power BI** - Advanced analytics and visualization
+- **GitHub Actions** - Automated deployment pipeline
+- **Open Source Community** - Inspiration and best practices
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Hugo du Preez**
+*Showcasing the power of data-driven insights*
+
+⭐ **Star this repo** if you find it helpful!
+
+</div># 📊 Portfolio Analytics
+
+[![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-Deployed-blue?style=for-the-badge&logo=microsoft-azure)](https://your-app-name.azurestaticapps.net)
+[![GitHub Actions Workflow](https://img.shields.io/github/actions/workflow/status/Hugo-du-Preez/Portfolio-analytics/azure-static-web-apps.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/Hugo-du-Preez/Portfolio-analytics/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Responsive](https://img.shields.io/badge/Responsive-Design-green?style=for-the-badge&logo=device)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
+
+> A professional portfolio website showcasing data analytics expertise, featuring interactive dashboards, methodology documentation, and project case studies. Built with modern web technologies and deployed on Azure Static Web Apps.
+
+## 🌟 Key Features
+
+- **📊 Interactive Analytics Dashboard** - Visual representation of data insights
+- **📱 Fully Responsive Design** - Optimized for all devices and screen sizes
+- **🔬 Data Analysis Methodology** - Comprehensive approach to analytics projects
+- **🏗️ System Architecture** - Technical implementation details
+- **📈 Power BI Integration** - Sample reports and dashboard examples
+- **⚡ Fast & Lightweight** - No frameworks, pure vanilla implementation
+- **🎨 Modern UI/UX** - Clean, professional design with smooth animations
+
+## 🛠️ Technology Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Frontend** | HTML5, CSS3, ES6+ JavaScript |
+| **Styling** | Custom CSS with CSS Grid & Flexbox |
+| **Deployment** | Azure Static Web Apps |
+| **CI/CD** | GitHub Actions |
+| **Analytics** | Power BI Desktop |
+| **Version Control** | Git & GitHub |
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Git for version control
+- Internet connection for deployment
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Hugo-du-Preez/Portfolio-analytics.git
+   cd Portfolio-analytics
+   ```
+
+2. **Run locally**
+   ```bash
+   # Option 1: Simple file opening
+   # Double-click index.html or open in browser
+
+   # Option 2: Local server (recommended)
+   python -m http.server 8000
+   # Visit: http://localhost:8000
+   ```
+
+3. **Explore the site**
+   - Navigate through different sections
+   - Test responsive design on various screen sizes
+   - Interact with dashboard elements
+
+## 📁 Project Structure
+
+```
+Portfolio-analytics/
+├── index.html                 # Main portfolio page
+├── src/
+│   └── css/
+│       ├── styles.css         # Main stylesheet
+│       └── js/
+│           └── app.js         # Interactive JavaScript
+├── reports/
+│   ├── README.md              # Report documentation
+│   └── *.pbix                 # Power BI files
+├── .github/
+│   └── workflows/
+│       └── azure-static-web-apps.yml
+├── .gitignore                 # Git ignore rules
+├── LICENSE                    # MIT License
+└── README.md                  # Project documentation
+```
+
+## 🌐 Deployment
+
+### Azure Static Web Apps Setup
+
+1. **Create Resource**
+   - Azure Portal → Static Web Apps → Create
+   - Select subscription and resource group
+
+2. **Connect Repository**
+   - Source: GitHub
+   - Organization: Hugo-du-Preez
+   - Repository: Portfolio-analytics
+   - Branch: main
+
+3. **Build Configuration**
+   - Build Preset: Custom
+   - App location: `/`
+   - API location: *(empty)*
+   - Output location: `.`
+
+4. **Deploy**
+   - Azure handles CI/CD automatically
+   - Site goes live in minutes
+
+## 📊 Analytics Showcase
+
+### Power BI Dashboard Features
+- **Task Management** - Progress tracking and status monitoring
+- **Resource Allocation** - Team utilization visualization
+- **Timeline Analysis** - Project scheduling and deadlines
+- **Performance Metrics** - KPI tracking and reporting
+- **Interactive Filters** - Dynamic data exploration
+
+### Technical Implementation
+- Custom calendar tables for date intelligence
+- Role-playing dimensions for flexible analysis
+- Conditional formatting for visual indicators
+- Slicers and filters for user interaction
+
+## 🎨 Customization
+
+### Styling
+- Modify `src/css/styles.css` for visual changes
+- CSS custom properties for consistent theming
+- Responsive breakpoints: 768px, 1024px
+- Smooth transitions and hover effects
+
+### Content
+- Update portfolio sections in `index.html`
+- Modify navigation and contact information
+- Add new projects or case studies
+- Customize dashboard examples
+
+### Functionality
+- Enhance interactions in `src/css/js/app.js`
+- Add new features or animations
+- Improve accessibility and performance
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to get involved:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/new-feature`)
+3. **Commit** changes (`git commit -m 'Add new feature'`)
+4. **Push** to branch (`git push origin feature/new-feature`)
+5. **Open** a Pull Request
+
+### Guidelines
+- Maintain responsive design principles
+- Test across different browsers and devices
+- Follow semantic HTML structure
+- Keep code clean and well-documented
+- Ensure accessibility compliance
+
+## 📄 License
+
+```
+MIT License
+
+Copyright (c) 2026 Hugo du Preez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
+
+## 📞 Contact
+
 **Hugo du Preez** 👋  
 *Data Analytics Professional*
 
