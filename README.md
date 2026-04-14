@@ -303,7 +303,6 @@ copies or substantial portions of the Software.
 - **💼 LinkedIn**: https://www.linkedin.com/in/hugo-du-preez/
 - **🐙 GitHub**: https://github.com/Hugo-du-Preez/
 - **📊 Live Dashboard**: https://white-meadow-022a87d10.1.azurestaticapps.net/
-- **📋 Documentation**: [Link to detailed setup guide]
 
 ### Troubleshooting
 - **Power BI Issues**: Verify the embed URL is still valid and report is published
